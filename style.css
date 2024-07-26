@@ -7,7 +7,14 @@
 html{
     scroll-behavior: smooth;
 }
-
+body {
+    font-family: 'Quicksand', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f8f9fa; /* light grey background */
+}
 .logo {
     border-radius: 60%;
     width:fit-content; /* Ajusta el tamaño según tus necesidades */
@@ -95,16 +102,24 @@ html{
     height: 100vh;
     
 }
-.inicio h1, h2{
-    margin-top:2em;
+.inicio h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
 
+.inicio h2 {
+    font-size: 1.5em;
+    font-family: 'Courgette', cursive;
+    color: #666;
 }
-.inicio p{
-    align-items:center;
-    margin: auto;
-    padding: 20px 0;
-    font-size: 22px;
+
+.inicio p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1em;
+    line-height: 1.8;
 }
+
 .inicio .redes {
     color: #fffffe;
     display: inline-block;
@@ -130,22 +145,21 @@ html{
 .sobremi .contenido-seccion{
     max-width: 1100px;
     margin: auto;
-    
-}
-.sobremi h2{
-    margin: 0;
-    font-size: 48px;
     text-align: center;
-    padding: 20px 0;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     
 }
-.sobremi .contenido-seccion p{
-    align-items:center;
-    margin: auto;
-    padding: 20px 0;
-    font-size: 22px;
+.sobremi h2 {
+    font-size: 3em;
+    font-family: 'Courgette', cursive;
+    margin-bottom: 20px;
 }
+
+.sobremi p {
+    font-size: 1.2em;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
 
 /*SECCION CONTACTO*/
 .contacto{
@@ -232,28 +246,28 @@ html{
 }
 /* Carrusel */
 .carousel-inner {
-    padding: 40px 40px 80px 40px;
-    max-height: 600px; 
+    /* padding: 40px 40px 80px 40px; */
+    /* max-height: 600px;  */
     overflow: hidden; 
   }
   
   .carousel-item img {
-    padding: 5px;
+    padding: 10px;
     background-color: #ddd;
-    width: 100%; /* Ancho del contenedor */
+    width: 90%; /* Ancho del contenedor */
     max-height: 600px; 
     object-fit: hidden; /* Ajusta el contenido sin deformarlo */
-    height:500px;/* Alto del contenedor */
+    height:40%;/* Alto del contenedor */
     margin: 40px 5px 40px 5px;
   }
 
 footer {
-    min-height: 200px;
+    min-height: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 50px; /* Ajusta este valor según la distancia deseada */
+    margin-top: 20px; /* Ajusta este valor según la distancia deseada */
 }
 
 .footer-logo {
@@ -356,6 +370,21 @@ textarea {
     background-color: #0056b3;
 }
 
+
+/* Efecto de aparición */
+.scroll-effect {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.scroll-effect.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
 /* SECCION RESPONSIVE */
 @media screen and (max-width: 980px) {
     nav {
@@ -412,6 +441,4 @@ textarea {
     .navbar-form {
         margin-top: 10px;
     }
-
-    /* Ajustes adicionales si es necesario */
 }
