@@ -20,7 +20,6 @@ body {
     width:fit-content; /* Ajusta el tamaño según tus necesidades */
     height: 10em; /* Ajusta el tamaño según tus necesidades */
     background-color: #ffffff; /* Cambia el color de fondo si lo deseas */
-    /* Agrega más estilos según tus necesidades */
 }
 
 /*MENU*/
@@ -141,6 +140,42 @@ body {
     background-color: #dedee0;
     color: #0f0e0e;
 } */
+
+
+
+/* Estilo para el texto resaltado */
+.highlight {
+  color: red;
+  font-weight: bold;
+}
+
+/* Estilo para el formulario de búsqueda */
+.search-form {
+  transition: all 0.3s ease-in-out;
+}
+
+.search-form:focus-within {
+  transform: scale(1.05); /* Escalar al hacer foco */
+}
+
+/* Estilo para el mensaje de búsqueda */
+.search-message {
+  display: none; /* Oculto por defecto */
+  position: fixed;
+  top: 80px;
+  right: 20px;
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.search-message.visible {
+  display: block; /* Mostrar el mensaje cuando es visible */
+}
+
 
 .sobremi {
     background-color: #f7f7f7; /* Fondo claro */
@@ -299,20 +334,6 @@ body {
     line-height: 1.5;
   }
   
-  /* .btn {
-    display: inline-block;
-    background-color: #007bff;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-  }
-  
-  .btn:hover {
-    background-color: #0056b3;
-  }
-   */
   @media (max-width: 768px) {
     .service-cards {
       grid-template-columns: 1fr;
